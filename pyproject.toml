@@ -3,9 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-# Flat-layout 자동 탐색이 server.py/test_connection.py까지 건네며 빌드가 실패하므로
-# 데이터 클라이언트 모듈만 명시한다 (upstream fjuliofontes/amazfit-mcp 코드 무변경).
-py-modules = ["zepp_client", "decoder", "normalize", "training", "known_devices"]
+py-modules = ["server", "zepp_client", "decoder", "normalize", "training", "known_devices"]
 
 [project]
 name = "amazfit-mcp"
